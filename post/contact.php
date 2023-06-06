@@ -1,6 +1,6 @@
 <?php
 
-include "./koneksi.php";
+include "../koneksi.php";
 
 $nama = $_POST['nama'];
 $mitra = $_POST['nama'];
