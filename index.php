@@ -82,9 +82,9 @@
         </div>
         <div class="row gy-4 d-flex justify-content-center">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <form action="post/contact.php" method="post" role="form" class="php-email-form">
+            <form action="input.php" method="post" role="form" class="php-email-form">
               <div class="form-group row">
-                <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                <label for="teknisi" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" name="teknisi" placeholder="Contoh: UMAY"
                     onkeyup="this.value = this.value.toUpperCase();" required />
@@ -98,7 +98,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="numbertiket" class="col-sm-2 col-form-label">No Tiket</label>
+                <label for="notiket" class="col-sm-2 col-form-label">No Tiket</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" name="notiket"
                     placeholder="Contoh: INxxxxxxxxx/WAxxxxxxxxxxxx" onkeyup="this.value = this.value.toUpperCase();" required />
@@ -158,7 +158,7 @@
                 </div>
               </div>
               <div class="text-center">
-                <button type="submit">Kirim Material</button>
+                <button type="submit" name="submit">Kirim Material</button>
               </div>
             </form>
           </div>

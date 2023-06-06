@@ -8,9 +8,7 @@ $password = "";
 // membuat koneksi
 $conn = mysqli_connect($servername, $username, $password, $database);
 // mengecek koneksi
-if (!$conn) {
-    die("Koneksi gagal: " . mysqli_connect_error());
+if(mysqli_connect_error()){
+    echo "Koneksi ke database gagal". mysqli_connect_error();
 }
-echo "Koneksi berhasil";
-mysqli_close($conn);
 ?>
