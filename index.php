@@ -82,43 +82,43 @@
         </div>
         <div class="row gy-4 d-flex justify-content-center">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <form action="" method="post" role="form" class="php-email-form">
+            <form action="post/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group row">
                 <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-10">
-                  <input type="nama" class="form-control" id="nama" placeholder="Contoh: UMAY"
+                  <input type="text" class="form-control" name="teknisi" placeholder="Contoh: UMAY"
                     onkeyup="this.value = this.value.toUpperCase();" required />
                 </div>
               </div>
               <div class="form-group row">
                 <label for="mitra" class="col-sm-2 col-form-label">Mitra</label>
                 <div class="col-sm-10">
-                  <input type="mitra" readonly class="form-control-plaintext" id="mitra" value="TA"
+                  <input type="text" readonly class="form-control-plaintext" name="mitra" value="TA"
                     onkeyup="this.value = this.value.toUpperCase();" required />
                 </div>
               </div>
               <div class="form-group row">
                 <label for="numbertiket" class="col-sm-2 col-form-label">No Tiket</label>
                 <div class="col-sm-10">
-                  <input type="numbertiket" class="form-control" id="numbertiket"
+                  <input type="text" class="form-control" name="notiket"
                     placeholder="Contoh: INxxxxxxxxx/WAxxxxxxxxxxxx" onkeyup="this.value = this.value.toUpperCase();" required />
                 </div>
               </div>
               <div class="form row">
                 <label for="nointernet" class="col-sm-2 col-form-label">No Internet</label>
                 <div class="col-sm-10">
-                  <input type="nointernet" class="form-control" id="nointernet" placeholder="Contoh: 12xxxxxxxxxx"
+                  <input type="text" class="form-control" name="nointernet" placeholder="Contoh: 12xxxxxxxxxx"
                     onkeyup="this.value = this.value.toUpperCase();" required />
                 </div>
               </div>
               <div class="form-group row">
                 <label for="pekerjaan" class="col-sm-2 col-form-label">Jenis Pekerjaan</label>
                 <div class="col-sm-10">
-                  <input type="pekerjaan" readonly class="form-control-plaintext" id="pekerjaan" value="Gangguan"
+                  <input type="text" readonly class="form-control-plaintext" name="pekerjaan" value="Gangguan"
                     onkeyup="this.value = this.value.toUpperCase();" required />
                 </div>
               </div>
-              <div class="form-group row">
+              <!-- <div class="form-group row">
                 <label for="material" class="col-sm-2 col-form-label">Material</label>
                 <div class="col-sm-10">
                   <select id="option" class="form-control selectpicker" data-selected-text-format="count">
@@ -149,7 +149,7 @@
                   </select>
                   <input type="material" class="form-control" name="material" placeholder="Jumlah" required/>
                 </div>
-              </div>
+              </div> -->
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
