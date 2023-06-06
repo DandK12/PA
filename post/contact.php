@@ -2,14 +2,14 @@
 
 include "../koneksi.php";
 
-$nama = $_POST['nama'];
-$mitra = $_POST['nama'];
-$numbertiket = $_POST['nama'];
-$nointernet = $_POST['nama'];
-$pekerjaan = $_POST['nama'];
+$nama = $_POST['Teknisi'];
+$mitra = $_POST['Mitra'];
+$numbertiket = $_POST['Number Tiket'];
+$nointernet = $_POST['No Internet'];
+$pekerjaan = $_POST['Pekerjaan'];
 
 
-
+mysql_query("INSERT INTO `teknisi` values(`Teknisi`, ``, `Number Tiket`, `No Internet`, ``)")
 
 
 
