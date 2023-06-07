@@ -82,7 +82,7 @@
         </div>
         <div class="row gy-4 d-flex justify-content-center">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <form action="input.php" method="post" role="form" class="php-email-form">
+            <form action="cek.php" method="POST" > <!-role="form" class="php-email-form"->
               <div class="form-group row">
                 <label for="teknisi" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-10">
