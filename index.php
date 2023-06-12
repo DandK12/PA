@@ -36,7 +36,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="d-flex align-items-center">WH STO Cikampek</h1>
@@ -48,7 +48,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <!-- <li><a href="index.html" class="active">Home</a></li> -->
-          <li><a href="admin/login.html">Login</a></li>
+          <li><a href="admin/login.php">Login</a></li>
         </ul>
       </nav>
       <!-- .navbar -->
@@ -82,7 +82,7 @@
         </div>
         <div class="row gy-4 d-flex justify-content-center">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <form action="input.php" method="post" role="form" class="php-email-form">
+            <form action="input.php" method="POST" class="php-email-form"> <!-role="form" class="php-email-form"->
               <div class="form-group row">
                 <label for="teknisi" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-10">
@@ -118,7 +118,7 @@
                     onkeyup="this.value = this.value.toUpperCase();" required />
                 </div>
               </div>
-              <!-- <div class="form-group row">
+              <div class="form-group row">
                 <label for="material" class="col-sm-2 col-form-label">Material</label>
                 <div class="col-sm-10">
                   <select id="option" class="form-control selectpicker" data-selected-text-format="count">
@@ -127,8 +127,8 @@
                     <option value="adapter">ADAPTER</option>
                     <option disabled value="ils">SOC ILS</option>
                     <option value="sum">SOC SUM</option>
-                    <option value="fuj">SOC FUJ</option>
-                    <option value="sleeve">SLEEVE TIPE 3</option>
+                    <option disabled value="fuj">SOC FUJ</option>
+                    <option disabled value="sleeve">SLEEVE TIPE 3</option>
                     <option value="protection">PROTECTION SLEEVE</option>
                     <option value="4">SP 1/4</option>
                     <option value="8">SP 1/8</option>
@@ -149,7 +149,7 @@
                   </select>
                   <input type="material" class="form-control" name="material" placeholder="Jumlah" required/>
                 </div>
-              </div> -->
+              </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
@@ -197,7 +197,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
