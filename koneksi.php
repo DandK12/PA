@@ -15,7 +15,6 @@ function connectToDatabase() {
     }
 
     return $conn;
-
 }
 
 ?>
