@@ -119,6 +119,13 @@
                 </div>
               </div>
               <div class="form-group row">
+                <label for="whso" class="col-sm-2 col-form-label">WH SO</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly class="form-control-plaintext" name="whso" value="CKP"
+                    onkeyup="this.value = this.value.toUpperCase();" required />
+                </div>
+              </div>
+              <div class="form-group row">
                 <label for="material" class="col-sm-2 col-form-label">Material</label>
                 <div class="col-sm-10">
                   <select id="option" class="form-control selectpicker" data-selected-text-format="count">

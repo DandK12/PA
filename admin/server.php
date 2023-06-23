@@ -16,6 +16,7 @@ $sql = mysqli_query($conn, "select * from teknisi ORDER BY id DESC LIMIT 1");
 			<th>No Tiket</th>
 			<th>No Internet</th>
 			<th>Pekerjaan</th>
+			<th>WH SO</th>
 		</thead>
 		<?php
 		while ($row = mysqli_fetch_array($sql)) {
@@ -26,6 +27,7 @@ $sql = mysqli_query($conn, "select * from teknisi ORDER BY id DESC LIMIT 1");
 			$notiket = $row['notiket'];
 			$nointernet = $row['nointernet'];
 			$pekerjaan = $row['pekerjaan'];
+			$whso = $row['whso'];
 			?>
 			<tbody>
 				<tr>
@@ -46,6 +48,9 @@ $sql = mysqli_query($conn, "select * from teknisi ORDER BY id DESC LIMIT 1");
 					</td>
 					<td>
 						<?php echo $pekerjaan; ?>
+					</td>
+					<td>
+						<?php echo $whso; ?>
 					</td>
 				</tr>
 			</tbody>

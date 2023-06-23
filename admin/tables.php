@@ -27,6 +27,12 @@
 
 <body id="page-top">
 
+    <?php
+
+    include './hitung.php';
+
+    ?>
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -99,7 +105,9 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    <?php echo $row_query2['nama'] ?>
+                                </span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -132,30 +140,70 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-danger">Tabel Data Material STO Cikampek</h6>
                         </div>
+                        <div class="col-md-12 bg-light text-right">
+                            <br>
+                            <td><a class="btn btn-danger" href="export-excel.php">Save as Excel</a></td>
+                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
-                                        <tr>
-                                            <th>Start date</th>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Salary</th>
-                                        </tr>
+                                        <th>No</th>
+                                        <th>Tanggal</th>
+                                        <th>Teknisi</th>
+                                        <th>Mitra</th>
+                                        <th>No Tiket</th>
+                                        <th>No Internet</th>
+                                        <th>Pekerjaan</th>
+                                        <th>WH SO</th>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>25/01/2023</td>
-                                            <td>Donna Snider</td>
-                                            <td>Customer Support</td>
-                                            <td>New York</td>
-                                            <td>27</td>
-                                            <td>$112,000</td>
-                                        </tr>
-                                    </tbody>
+                                    <?php
+                                    while ($row = mysqli_fetch_array($sql)) {
+
+                                        $id = $row['id'];
+                                        $tanggal = $row['tanggal'];
+                                        $teknisi = $row['teknisi'];
+                                        $mitra = $row['mitra'];
+                                        $notiket = $row['notiket'];
+                                        $nointernet = $row['nointernet'];
+                                        $pekerjaan = $row['pekerjaan'];
+                                        $whso = $row['whso'];
+
+                                        $phpdate = strtotime($tanggal);
+                                        $tanggal = date('d-M-Y', $phpdate);
+
+                                        ?>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <?php echo $id; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $tanggal; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $teknisi; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $mitra; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $notiket; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $nointernet; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $pekerjaan; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $whso; ?>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    <?php } ?>
                                 </table>
+
                             </div>
                         </div>
                     </div>

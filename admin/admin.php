@@ -27,6 +27,14 @@
 
     include './hitung.php';
 
+    // mengaktifkan session
+    session_start();
+
+    // cek apakah user telah login, jika belum login maka di alihkan ke halaman login
+    if ($_SESSION['status'] != "login") {
+        header("location:login.php");
+    }
+
     ?>
 
     <!-- Page Wrapper -->
@@ -165,13 +173,14 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="login.php" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $row_query2['nama'] ?></span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="login.php" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="login.php" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -225,7 +234,9 @@
                                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
                                                 Nama Terakhir Input</div>
                                             <div class="h4 mb-0 font-weight-bold text-gray-800">
-                                                <span><?php echo $row_query['teknisi']?></span>
+                                                <span>
+                                                    <?php echo $row_query['teknisi'] ?>
+                                                </span>
                                             </div>
 
                                         </div>

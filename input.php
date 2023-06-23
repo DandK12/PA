@@ -10,9 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $notiket = mysqli_real_escape_string($conn, $_POST['notiket']);
     $nointernet = mysqli_real_escape_string($conn, $_POST['nointernet']);
     $pekerjaan = mysqli_real_escape_string($conn, $_POST['pekerjaan']);
+    $whso = mysqli_real_escape_string($conn, $_POST['whso']);
 
     // Prepare the SQL statement
-    $sql = "INSERT INTO `teknisi`(`teknisi`, `mitra`, `notiket`, `nointernet`, `pekerjaan`) values ('$teknisi', '$mitra', '$notiket', '$nointernet', '$pekerjaan')";
+    $sql = "INSERT INTO `teknisi`(`teknisi`, `mitra`, `notiket`, `nointernet`, `pekerjaan`, `whso`) values ('$teknisi', '$mitra', '$notiket', '$nointernet', '$pekerjaan', '$whso')";
 
     $stmt = $conn->prepare($sql);
     $stmt->execute();
